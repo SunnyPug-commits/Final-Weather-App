@@ -21,8 +21,25 @@
     <script src="src/index.js"></script>
 
     <div class="container">
-      <div class="col-6">hello</div>
-      <div class="col-6">world</div>
+      <div class="row border border-2 border-black box-1">
+        <p>Choose a location</p>
+        <form>
+          <input type="text" />
+          <input type="submit" value="search" />
+        </form>
+      </div>
+      <div class="row border border-2 border-black box-2">
+        <div class="col-6">
+          <div class="row">city</div>
+          <div class="row">date</div>
+          <div class="row">time</div>
+          <div class="row">precipitation</div>
+          <div class="row">wind</div>
+        </div>
+        <div class="col-6">52°</div>
+      </div>
+
+      <div class="row border border-2 border-black box-3">Suggested Cities</div>
     </div>
   </body>
 </html>
