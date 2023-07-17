@@ -20,14 +20,16 @@
     ></script>
     <script src="src/index.js"></script>
 
-    <div class="container">
+    <div class="container border border-2">
       <div class="WeatherApp">
         <div class="row border border-2 border-black box-1">
-          <p>Choose a location</p>
-          <form>
-            <input type="text" />
-            <input type="submit" value="search" />
-          </form>
+          <h2>Choose a location</h2>
+          <div class="col">
+            <form>
+              <input type="text" />
+            </form>
+          </div>
+          <div class="col">🔍</div>
         </div>
         <div class="row border border-2 border-black box-2">
           <div class="col-6 information">
@@ -39,19 +41,39 @@
               <li>wind</li>
             </ul>
           </div>
-          <div class="col-6">52°</div>
+          <div class="col-6">
+            <ul>
+              <li>⛅</li>
+              <li>52° F | C</li>
+              <li>Clear</li>
+            </ul>
+          </div>
         </div>
 
         <div class="row border border-2 border-black box-3">
-          Suggested Cities
+          <h2>Suggested Cities</h2>
+          <div class="col">
+            <a href="" class="btn btn-primary">Sydney</a>
+          </div>
+          <div class="col">
+            <a href="" class="btn btn-primary">Hong Kong</a>
+          </div>
+          <div class="col">
+            <a href="" class="btn btn-primary">London</a>
+          </div>
+          <div class="col">
+            <a href="" class="btn btn-primary">Lima</a>
+          </div>
         </div>
       </div>
-      <a
-        href="https://github.com/SunnyPug-commits/Final-Weather-App"
-        target="_blank"
-        >Open source code</a
-      >
-      by Molly Howard
+      <small>
+        <a
+          href="https://github.com/SunnyPug-commits/Final-Weather-App"
+          target="_blank"
+          >Open source code</a
+        >
+        by Molly Howard
+      </small>
     </div>
   </body>
 </html>
