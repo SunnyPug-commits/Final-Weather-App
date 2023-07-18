@@ -1,4 +1,4 @@
-body {
+.WeatherApp {
   background-color: white;
 }
 
@@ -32,6 +32,10 @@ body {
 .information {
   text-align: center;
   margin: 0 auto;
+}
+
+.weekly {
+  text-align: center;
 }
 
 .box-3 {
