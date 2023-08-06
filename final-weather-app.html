@@ -3,93 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather ☀️</title>
+    <title>Weather</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>last updated <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="Sunny with clouds"
+                  id="icon"
+                />
+                <div>
+                  <strong id="temperature"></strong
+                  ><span class="units">°F</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> mph</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <small>
+          <a href="https://github.com/SunnyPug-commits" target="_blank"
+            >Open-source code</a
+          >
+          by Molly Howard
+        </small>
+      </div>
+    </div>
+
+    <script src="src/app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="src/index.js"></script>
-
-    <div class="container border border-secondary-subtle border-2">
-      <div class="box WeatherApp">
-        <div class="row border border-secondary-subtle border-4 box-1">
-          <h2><strong>Search for a location</strong></h2>
-          <div class="col">
-            <form class="search-bar">
-              <input type="text" />
-            </form>
-          </div>
-          <div class="col">🔍</div>
-        </div>
-        <div class="row box-2 border border-info">
-          <div class="col-6 information">
-            <ul>
-              <li>city</li>
-              <li>date</li>
-              <li>time</li>
-              <li>precipitation</li>
-              <li>wind</li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>⛅</li>
-              <li>52° F | C</li>
-              <li>Clear</li>
-            </ul>
-          </div>
-
-          <div class="row weekly">
-            <div class="col">
-              <div class="row">⛅</div>
-              <div class="row">66°</div>
-            </div>
-            <div class="col">
-              <div class="row">☀️</div>
-              <div class="row">62°</div>
-            </div>
-            <div class="col">
-              <div class="row">🌥️</div>
-              <div class="row">67°</div>
-            </div>
-            <div class="col">
-              <div class="row">🌦️</div>
-              <div class="row">64°</div>
-            </div>
-            <div class="col">
-              <div class="row">🌧️</div>
-              <div class="row">63°</div>
-            </div>
-          </div>
-        </div>
-        <div class="row box-3">
-            <h2><strong>Suggested Cities</strong></h2>
-           
-            <a href="" class="button sydney">Sydney</a>
-            <a href="" class="button hongkong">Hong Kong</a>
-            <a href="" class="button london">London</a>
-            <a href="" class="button lima">Lima</a>
-
-          </div>
-      </div>
-      <small>
-        <a
-          href="https://github.com/SunnyPug-commits/Final-Weather-App"
-          target="_blank"
-          >Open source code</a
-        >
-        by Molly Howard
-      </small>
-    </div>
   </body>
 </html>
