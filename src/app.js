@@ -52,6 +52,7 @@ function displayForecast() {
 function getForecast(city) {
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
   let apiKey = "17t909018ba21db35adf4700b4co23a4";
+  axios.get(apiUrl).then(displayForecast);
   console.log(apiUrl);
 }
 
@@ -74,7 +75,7 @@ function displayTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  getForecast(response.data.city);
+  getForecast(response.data);
 }
 
 function search(city) {
